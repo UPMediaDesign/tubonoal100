@@ -1,0 +1,34 @@
+{
+  "files": [{
+    "source": "js/formulario.js",
+    "type": "SCRIPT",
+    "size": 4.096,
+    "stopExecution": false
+  },    {
+    "source": "js/jquery.form.js",
+    "type": "SCRIPT",
+    "size": 45.056
+  }, {
+    "source": "js/jquery.nanoscroller.min.js",
+    "type": "SCRIPT",
+    "size": 16.819
+  }, {
+    "source": "js/jquery.placeholder.min.js",
+    "type": "SCRIPT",
+    "size": 16.819
+  }, {
+    "source": "js/jquery.Rut.js",
+    "type": "SCRIPT",
+    "size": 16.819
+  },  {
+    "source": "js/jquery.validate.js",
+    "type": "SCRIPT",
+    "size": 16.819
+  }, {
+    "source": "css/style.css",
+    "size": 16.819
+  }
+
+  ]
+
+}

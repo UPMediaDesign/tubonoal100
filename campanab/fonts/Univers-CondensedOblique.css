@@ -1,0 +1,14 @@
+
+@font-face {
+	font-family:'Univers-CondensedOblique';
+	src: url('Univers-CondensedOblique_gdi.eot');
+	src: url('Univers-CondensedOblique_gdi.eot?#iefix') format('embedded-opentype'),
+		url('Univers-CondensedOblique_gdi.woff') format('woff'),
+		url('Univers-CondensedOblique_gdi.ttf') format('truetype'),
+		url('Univers-CondensedOblique_gdi.otf') format('opentype'),
+		url('Univers-CondensedOblique_gdi.svg#Univers-CondensedOblique') format('svg');
+	font-weight: 400;
+	font-style: oblique;
+	font-stretch: condensed;
+	unicode-range: U+0020-2212;
+}

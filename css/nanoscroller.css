@@ -1,0 +1,57 @@
+/** initial setup **/
+
+@media only screen and (min-width : 480px) {
+
+.nano {
+  position : relative;
+
+  overflow : hidden;
+}
+
+
+.nano > .nano-content {
+  position      : absolute;
+  overflow      : scroll;
+  overflow-x    : hidden;
+  top:            30px;
+  right         : 0;
+  bottom        : 0;
+  left          : 0;
+  padding-right:70px !important
+}
+.nano > .nano-content:focus {
+  outline: thin dotted;
+}
+.nano > .nano-content::-webkit-scrollbar {
+  display: none;
+}
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  display: block;
+}
+.nano > .nano-pane {
+  background : rgba(0,0,0,.25);
+  position   : absolute;
+  width      : 5px;
+  right      : 0;
+  top        : 50px;
+  bottom     : 0px;
+  visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : .01;
+  -webkit-transition    : .2s;
+  -moz-transition       : .2s;
+  -o-transition         : .2s;
+  transition            : .2s;
+ 
+}
+.nano > .nano-pane > .nano-slider {
+  background: #5e7294;
+  position              : relative;
+
+}
+.nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
+  visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : 0.99;
+}
+
+
+}

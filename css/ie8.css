@@ -1,0 +1,63 @@
+/* CSS Document */
+
+
+body{
+	
+	}
+
+#boton{
+behavior: url(PIE.htc);
+background:pink;
+position:relative;
+}
+
+
+#header > h2 {
+	font-family:roboto;
+	font-weight:900;
+	font-size:18px;
+	}
+	
+#videos h3, #videos h4{
+	font-family:roboto;
+	font-weight:900;
+	font-size:16px;
+	}	
+	
+#video_uno img{
+	padding:0;
+	border:3px solid #fff;
+	}	
+
+
+#menu > span{
+	font-family:roboto;
+	font-weight:900;
+	}	
+	
+#boton{
+	font-family:roboto;
+	font-weight:900;
+	font-size:20px;
+	font-style:italic;
+	}	
+	
+	
+
+#text_menu{
+	font-family:roboto;
+	font-style:italic;
+	}	
+	
+#menu_principal{
+	font-family:roboto;
+	}
+	
+.close{
+	font-family:roboto;
+	font-weight:900;
+	}	
+	
+#contacto_wrap{
+	font-family:roboto;
+	}

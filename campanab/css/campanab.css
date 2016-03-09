@@ -1,0 +1,49 @@
+/* CSS Document */
+
+#header > h2 {
+    color: #1b0c0d;
+    margin-left: 15px;
+}
+
+#videos h3, #videos h4{
+	  color: #322428;
+	}	
+	
+	
+	
+	#header.header_interior h2{
+		color:#322428;
+		}
+		
+		#header.header_interior #boton, #FormularioContacto .submit{	
+		
+		background: rgba(221,151,53,1) !important;
+background: -moz-linear-gradient(-45deg, rgba(221,151,53,1) 0%, rgba(238,180,100,1) 44%, rgba(221,151,53,1) 100%) !important;
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(221,151,53,1)), color-stop(44%, rgba(238,180,100,1)), color-stop(100%, rgba(221,151,53,1)))!important;
+background: -webkit-linear-gradient(-45deg, rgba(221,151,53,1) 0%, rgba(238,180,100,1) 44%, rgba(221,151,53,1) 100%)!important;
+background: -o-linear-gradient(-45deg, rgba(221,151,53,1) 0%, rgba(238,180,100,1) 44%, rgba(221,151,53,1) 100%)!important;
+background: -ms-linear-gradient(-45deg, rgba(221,151,53,1) 0%, rgba(238,180,100,1) 44%, rgba(221,151,53,1) 100%)!important;
+background: linear-gradient(135deg, rgba(221,151,53,1) 0%, rgba(238,180,100,1) 44%, rgba(221,151,53,1) 100%)!important;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd9735', endColorstr='#dd9735', GradientType=1 )!important;	
+	}
+	
+	#header.header_interior #boton span{
+	border-right:1px solid #e09f45;
+	}
+	
+.white #menu > span{
+	color:#fff;
+	}	
+	
+.uc > span {
+    display: block;
+    float: left;
+  
+    font-weight: bolder;
+    line-height: 23px;
+    margin-right: 10px;
+    text-transform: uppercase;
+	 color: #ed9d29;
+}
+
+#video_dos h4 span{width:100%;}
