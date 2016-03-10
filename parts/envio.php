@@ -1,4 +1,4 @@
-<?
+<?php
 
 function ValidarDatos($campo){
     /*Array con las posibles cabeceras a utilizar por un spammer*/
@@ -50,35 +50,12 @@ $fecha = date("d-m-Y H:i");
 //$total_car = $n_nombre * $n_apellido * $n_email * $n_rut * $n_telefono;    // Si alguno de ellos vale 0, $total_car valdrá 0 
 
  
- 
- 
- 
- 
- 
- 
- 
      //BASE DE DATOS
     include("abre_conexion.php"); 
      
-    $_GRABAR_SQL = "INSERT INTO $tabla (nombre,apellido,email,rut,telefono, ciudad) VALUES ('$nombre','$apellido','$email', '$rut', '$telefono', '$ciudad')";  
+    $_GRABAR_SQL = "INSERT INTO $tabla (nombre,apellido,email,rut,telefono, ciudad , fecha) VALUES ('$nombre','$apellido','$email', '$rut', '$telefono', '$ciudad' , '$fecha')";  
     mysql_query($_GRABAR_SQL); 
     include("cierra_conexion.php"); 
-	
-	
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	$correo="<html><head></head><body><p style='font-family:Arial;font-size:12px;line-height:16px;'>
 	Contacto Cuenta 2:<br /><br />
@@ -92,29 +69,31 @@ $fecha = date("d-m-Y H:i");
 	</p></body></html>";
 	require_once('class.phpmailer.php');
 	$mail = new PHPMailer();
+	
 	$mail->IsSMTP();
+	
+	$mail->SMTPDebug = 3; // enables SMTP debug information (for testing) // 1 = errors and messages // 2 = messages only
+	$mail->Debugoutput = 'html';
+	
 	$mail->SMTPAuth = true;
-	$mail->SMTPSecure = "tls";
-	$mail->Host       = "email-smtp.us-east-1.amazonaws.com";
-	$mail->Port       = 587;
+	$mail->SMTPSecure = "TLS";
+	$mail->Host       = "ssl://email-smtp.us-east-1.amazonaws.com";
+	$mail->Port       = 465;
 	$mail->Username = "AKIAJZEC72Z56EWX6FTQ";
 	$mail->Password = "Ak/fkgFY34tqqoUwZ1Eqb6pkHyUa8ynolvxjwfzGVlLP";
 	$body = "<html><head><style>p{font-family:Arial;font-size:12px}</style></head><body>$correo</body>";
-	$mail->SetFrom($_POST[email],$_POST[nombre]);
+	$mail->SetFrom('cuprum@tubonoal100.cl',$_POST[nombre]);
 	$mail->AddAddress("cuprum@tubonoal100.cl", "Tu Bono al 100%");
 	$mail->Subject = "Formulario de Contacto";
 	$mail->MsgHTML($body);
 	$mail->Send();
+	
+	
+	/* if (!$mail->send()) {
+		echo "Mailer Error: " . $mail->ErrorInfo;
+	} else {
+		echo "Message sent!";
+	} */
+	
 }
-
-
-
-
-
-
-
-
-
-
-
 ?>

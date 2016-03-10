@@ -7,7 +7,7 @@
 
 //Productivo
 $hotsdb = "upmedia.crcq0jopmo84.us-west-2.rds.amazonaws.com:3306";
-$basededatos = "cuenta2";    // sera el valor de nuestra BD 
+$basededatos = "tubonoal100";    // sera el valor de nuestra BD 
 
 $usuariodb = "upmedia";    // sera el valor de nuestra BD 
 $clavedb = "upmedia8039876.,";    // sera el valor de nuestra BD 
