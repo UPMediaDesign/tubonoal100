@@ -1,24 +1,138 @@
 
-<div class="myvids" id="myvid" width="100%" style="width:100%;height:100%;">
-  <video class="thevid"  style="max-width:100%;height:100%;" id="my_video_ap1" preload="auto"  autoplay controls >
-    <source type="video/youtube" src="https://www.youtube.com/watch?v=Lx4hNbvUhaI" />
-    <span style="color:white;">Your browser does not support HTML5, Flash, or Silverlight.  Please update your browser.</span>
-  </video>
-  
-  <!--
-  <iframe width="420" height="315" src="//www.youtube.com/embed/IGz13x5OJ_8?rel=0&iv_load_policy=3&autoplay=1&html5=1" frameborder="0" allowfullscreen></iframe>
--->
 
-
-
-</div>
+<header id="header" class="header_interior">
+	<h1 class="ucbo"><img id="logo" src="img/logo.png" width="511" height="94" alt="Tu Bono al 100%"/></h1>
+    <h2 class="uco">Maximiza el valor de tu Bono invirtiendolo en APV </h2>
+   
+</header>
 
 
 
 <script>
+$.getScript('https://www.youtube.com/iframe_api');
+//ID del video
+videoinicio = 'bMIyO_IWJew';
+
+var player;
+
+//construye el video
+
+if (typeof tag === "undefined") { 
+  // if first run load the YT API which will call the correct functions.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+} else {
+   // if YT api already loaded, we need to call the function.
+   onYouTubeIframeAPIReady();
+}
+
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '480',
+        width: '853',
+		playerVars: { 
+			rel : 0,
+			start: 1,
+			enablejsapi : 1, 
+			autoplay: 1, 
+			disablekb: 1,
+			controls: 0 , 
+			//origin : '"localhost/bono_b"' , 
+			origin : 'http://www.tubonoal100.cl' ,
+			iv_load_policy : 3 , 
+			modestbranding : 1 , 
+			showinfo : 0 , 
+			loop : 0
+			//hd: 0
+		},
+        videoId: videoinicio,
+		events: {
+		  'onReady': onPlayerReady,
+		  'onStateChange': onPlayerStateChange
+		}
+  });
+  
+}
 
 
 
+
+function onPlayerReady(event) {
+	//event.target.playVideo();	
+	
+	
+	
+	/*
+	YT.PlayerState.ENDED
+	YT.PlayerState.PLAYING
+	YT.PlayerState.PAUSED
+	YT.PlayerState.BUFFERING
+	YT.PlayerState.CUED
+	*/	
+}
+
+
+
+function onPlayerStateChange(event) {
+	//event.target.playVideo();	
+	
+	
+	if(event.data == YT.PlayerState.PLAYING){
+		tvid = player.getDuration();
+		tvidd = Math.round(tvid);
+		//console.log('total'+tvidd);
+	}
+	
+	if(event.data == YT.PlayerState.PLAYING){
+		//setTimeout( time() , 1000 );
+		//console.log('play_video');
+	}
+	
+	if (event.data == YT.PlayerState.ENDED){
+		// Agregar evento y acción cuando termine el video
+		//console.log('terminé');
+	    ga('send', 'event', 'Landing A', 'View', 'Video A 100%' );					
+		$('#content').removeClass('activo');
+		 TweenMax.to(container, 0.5,   {top:"-100%", opacity:0, delay:0});
+		 TweenMax.to(inicio, 0.3,   {top:"-100%", opacity:0, delay:0}); 
+	}
+	
+}
+
+
+  
+ function iniciar(){
+	player.playVideo();
+}
+
+
+
+$('#inicio').click( function() {
+   player.stopVideo();
+});
+
+</script>
+
+
+<div class="embed-responsive embed-responsive-16by9">
+	<div id="player"  class="embed-responsive-item"></div>
+</div>
+
+
+
+
+<!--
+
+   <div class="myvids" id="myvid" width="100%" style="width:100%;height:100%;">
+   <video class="thevid"  style="max-width:100%;height:100%;" id="my_video_ap1" preload="auto"  autoplay controls >
+    <source type="video/youtube" src="https://www.youtube.com/watch?v=Lx4hNbvUhaI" /> 
+   </video>
+   <iframe width="420" height="315" src="//www.youtube.com/embed/IGz13x5OJ_8?rel=0&iv_load_policy=3&autoplay=1&html5=1" frameborder="0" allowfullscreen>    </iframe>
+</div>
+<script>
 $(function () {
     player = new MediaElementPlayer('#my_video_ap1', {
         plugins: ['youtube']
@@ -29,10 +143,6 @@ $('video').mediaelementplayer({
 	success: function(media) {
     media.play();
 	},
-
-
-    
-
     plugins: ['youtube'],
     // if set, overrides <video width>
     videoWidth: -1,
@@ -71,12 +181,4 @@ $('video').mediaelementplayer({
     // array of keyboard commands
     keyActions: []
 });
-
-
-
-   
-
-
-
-
 </script>

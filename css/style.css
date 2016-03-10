@@ -1,4 +1,5 @@
 
+.oculto{display:none;}
 .loading{
 	position:fixed;
 	top:0;
@@ -138,13 +139,18 @@ ESTRUCTURA
 ----------------------------------------------------------------------*/
 
 
-html { 
-  background: url("../img/background.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  
+#fondo { 
+    background: url("../img/background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-ms-behavior: url(css/backgroundsize.htc);
+	behavior: url(css/backgroundsize.htc);
+	height: 100%;
+    position: fixed;
+    width: 100%;
+	top:0;
 }
 
 body{
@@ -194,15 +200,16 @@ body{
 }
 
 #menu {
-    background: transparent url("../img/menuapv.png") no-repeat scroll 0 0 / 100px auto;
+    background: transparent url("../img/menuapv.png") no-repeat scroll 0 0;
+	background-size:100% auto;
     color: #fff;
     cursor: pointer;
     display: block;
-    height: 110px;
+    height: 95px;
     position: absolute;
     right: -5px;
     top: 25px;
-    width: 100px;
+    width: 140px;
     z-index: 12;
 }
 
@@ -244,8 +251,9 @@ background: -webkit-radial-gradient(center, ellipse cover, rgba(32,41,87,1) 0%, 
 background: -o-radial-gradient(center, ellipse cover, rgba(32,41,87,1) 0%, rgba(31,37,69,1) 100%);
 background: -ms-radial-gradient(center, ellipse cover, rgba(32,41,87,1) 0%, rgba(31,37,69,1) 100%);
 background: radial-gradient(ellipse at center, rgba(32,41,87,1) 0%, rgba(31,37,69,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202957', endColorstr='#1f2545', GradientType=1 );
-behavior: url("http://campanabono.upmedia.cl/css/PIE.htc");
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202957', endColorstr='#1f2545', GradientType=1 );*/
+behavior: url("css/PIE.htc");
+background:#202852 \9;
 position:relative;
 }
 
@@ -349,7 +357,7 @@ VIDEOS
 	
 .view {
     background: transparent url("../img/play.png") no-repeat scroll center 20px;
-    color: #f7d199;
+    color: #fff;
     display: block;
     font-family: helvetica,aria,sans-serif;
     font-size: 12px;
@@ -359,21 +367,23 @@ VIDEOS
     text-transform: uppercase;
     top: 40%;
     width: 100%;
+	line-height:160px;
 }
 
 
 .view2 {
-    background: transparent url("../img/play.png") no-repeat scroll center 20px;
-    color: #f7d199;
+    background: transparent url("../img/play2.png") no-repeat scroll center 20px;
+    color: #fff;
     display: block;
     font-family: helvetica,aria,sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     height: 100px;
     left: 0;
+    line-height: 124px;
     position: absolute;
     text-align: center;
     text-transform: uppercase;
-    top: 20%;
+    top: 10%;
     width: 212px;
 }
 
@@ -536,7 +546,7 @@ AJAX CONTENT
 #inicio {
     background: #fff none repeat scroll 0 0;
     border-radius: 50%;
-    color: #6c7595;
+    color: #6c7595;s
     font-family: univers-condensedoblique;
     font-size: 12px;
     height: 39px;
@@ -545,7 +555,7 @@ AJAX CONTENT
     opacity: 0;
     padding: 29px 10px 10px;
     position: fixed;
-    right: 102px;
+    right: 150px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -555,7 +565,9 @@ AJAX CONTENT
 	-webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
+	behavior: url("css/PIE.htc");
 }
+
 	
 	
 	
@@ -595,7 +607,14 @@ CONTACTO
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+background-color:#3e4359;
+	
 	}	
+	
+
+
+
+
 	
 #FormularioContacto p {
     float: left;
@@ -609,10 +628,14 @@ CONTACTO
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    padding: 17px 0 17px 20px;
+    padding: 15px 0 15px 20px;
     width: 90%;
 	background:#646d82;
     border: 1px solid #414a5f;
+	behavior: url("css/PIE.htc");
+	color: #cfcfcf;
+	font-size:15px;
+	
 }
 
 
@@ -814,6 +837,11 @@ body{width: 100%; height: 100%; margin: 0; padding: 0; overflow:hidden;}
 		width:340px;
 		}
 		
+		
+	.embed-responsive {
+    margin-top: 160px;
+    }	
+		
 	#video_uno img {
     background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
     height: auto;
@@ -843,6 +871,14 @@ IPHONE
 @media only screen and (max-width : 480px) {
 	
 	
+	
+	#content_home{
+	 height: 100%;
+    min-height: 100%;
+    overflow: scroll;
+    position: fixed;
+	}
+	
 	.text-small {
     color: #becfcf;
 	}
@@ -870,8 +906,7 @@ IPHONE
 	
 	
 	.view2 {
-    background: transparent url("../img/play.png") no-repeat scroll center 20px;
-    color: #f7d199;
+    background: transparent url("../img/play2.png") no-repeat scroll center 20px;
     display: block;
     font-family: helvetica,aria,sans-serif;
     font-size: 12px;
@@ -992,6 +1027,8 @@ body.remove_logo #header h1, body.remove_logo #header h2, body.remove_logo #boto
 			}	
 			
 		#inicio {
+    background: transparent none repeat scroll 0 0;
+    color: #fff;
     left: 10%;
     position: relative;
     top: 18px !important;
@@ -1132,7 +1169,63 @@ body.remove_logo #header h1, body.remove_logo #header h2, body.remove_logo #boto
 
 
 
+	
+
+  
 
 
 
+
+/*VIDEO*/
+.embed-responsive {
+    margin-left: 5%;
+    margin-top: 200px;
+	width:800px;
+	height:450px;
+	
+}
+
+
+.embed-responsive iframe{
+	border: 1px solid #fff;
+	width:100%;
+	height:100%;
+	}
+	
+	@media only screen and (max-width : 480px) {
+		
+		.embed-responsive {
+    height: auto;
+    margin-left: 5%;
+    margin-top: 0;
+    width: 90% !important;
+		}
+	}
+
+
+
+@media only screen and (min-width:480px) and (max-width: 640px)  {
+	
+	.embed-responsive {
+    margin-left: 5%;
+    min-height:400px;
+    width: 90% !important;
+		}
+	}
+	 
+	 
+	 
+	 #mensaje {
+    color: #fff;
+    font-family: Univers-CondensedLightOblique;
+    font-size: 25px;
+    line-height: 29px;
+    margin-left: 0;
+	margin-bottom: 40px;
+}
+
+
+#mensaje span{
+	display:block,
+	}
 

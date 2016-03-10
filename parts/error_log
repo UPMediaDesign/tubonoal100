@@ -1,0 +1,1 @@
+[09-Mar-2016 19:00:18 America/Santiago] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in /home/upmediac/campanabono/parts/abre_conexion.php on line 16
