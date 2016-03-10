@@ -1,11 +1,14 @@
 //LOADING
 
+$(document).ready(function(){
+$('#section1_video1').click();
+});
 
 jQuery(window).load(function() {
-		$(".loading").fadeOut("slow");;
+		
+		$(".loading").fadeOut("slow");
+		
 	});
-
-
 
 //VARIABLES
 var menu = $('#menu_container');
@@ -34,21 +37,27 @@ $('#menu').on('click', function(e) {
       $('#content').removeClass('activo');
 	  TweenMax.to(boton, 0.3,   {marginLeft:"0%", opacity:1, delay:0});
 	  TweenMax.to(container, 0.5,   {top:"-100%", opacity:0, delay:0});
-	  TweenMax.to(inicio, 0.3,   {top:"-100%", opacity:1, delay:0}); 
+	  TweenMax.to(inicio, 0.3,   {top:"-100%", opacity:0, delay:0}); 
  });
  
  
   $('#section1_video1, #boton, #section2_video1, #menu_principal a').on('click', function(e) {
       $('#content').addClass('activo');
 	  $('body').addClass('remove_logo');
-	  TweenMax.to(inicio, 0.3,   {top:"5%", opacity:1, delay:0}); 
+	  TweenMax.to(inicio, 0.2,   {top:"5%", opacity:1, delay:0}); 
  });
 
  $('#section1_video1').on('click', function(e) {
-     
 	 $('#content').addClass('video');
      $('#content').load('parts/video.html');
-	 
+	 ga('send', 'pageview', 'Landing(B) - Video1');
+ });
+ 
+   $('#section2_video1').on('click', function(e) {
+     
+	 $('#content').addClass('video');
+     $('#content').load('parts/video2.html');
+	 ga('send', 'pageview', 'Landing(B) - Video2');
  });
 
 
@@ -64,6 +73,7 @@ $('#menu').on('click', function(e) {
 	 $('#content').addClass('contacto');
      beforeSend:jQuery('#content').html("<div class='cargando'></div>"); 
      $('#content').load('parts/contacto.html'); 
+	 ga('send', 'pageview', 'Landing(B) - Contacto');
  });
  
   $('.menu1').on('click', function(e) {
@@ -71,6 +81,7 @@ $('#menu').on('click', function(e) {
 	 $('#menu_container').removeClass('activo');
 	  beforeSend:jQuery('#content').html("<div class='cargando'></div>"); 
 	 $('#content').load('parts/que_es_apv.html'); 
+	 ga('send', 'pageview', 'Landing(B) - Que es APV');
  });
  
   $('.menu2').on('click', function(e) {
@@ -78,6 +89,7 @@ $('#menu').on('click', function(e) {
 	  $('#menu_container').removeClass('activo');
 	   beforeSend:jQuery('#content').html("<div class='cargando'></div>"); 
       $('#content').load('parts/beneficios_apv.html'); 
+	  ga('send', 'pageview', 'Landing(B) - Beneficios APV');
  });
  
   $('.menu3').on('click', function(e) {
@@ -85,6 +97,7 @@ $('#menu').on('click', function(e) {
 	   $('#menu_container').removeClass('activo');
 	    beforeSend:jQuery('#content').html("<div class='cargando'></div>"); 
 	  $('#content').load('parts/inverti_apv.html'); 
+	  ga('send', 'pageview', 'Landing(B) - Invertir APV');
  });
  
  
@@ -92,22 +105,19 @@ $('#menu').on('click', function(e) {
 $( document ).ajaxComplete(function( event, xhr, settings ) {
 	
 	
+	
+	
+	
+	
+	
 	 $('body').addClass('white');
-	
-	
-	
 	
 	if (screen && screen.width > 480) {
  $(".nano").nanoScroller({ 
-	//alwaysVisible: true 
+	alwaysVisible: true 
 	
 	});
 }
-	
- 
-
-	
-	
 	
 	
 	TweenMax.to(container, 0.5,   {top:"0px", opacity:1, delay:0});
@@ -115,6 +125,11 @@ $( document ).ajaxComplete(function( event, xhr, settings ) {
   if ( settings.url === "parts/contacto.html" ) {
 	  
 	  
+
+
+
+
+
 
 	  
 //$('#boton').addClass('quitar');

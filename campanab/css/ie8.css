@@ -5,12 +5,19 @@ body{
 	
 	}
 
-#boton{
-behavior: url(PIE.htc);
-background:pink;
-position:relative;
+#header #boton{
+	background:#ed9d29;
+behavior: url(css/PIE.htc);
+
 }
 
+
+.submit{
+	background-color:#000 !important;
+behavior: url(css/PIE.htc);
+	}
+
+.input{behavior: url(css/PIE.htc);}
 
 #header > h2 {
 	font-family:roboto;
@@ -26,7 +33,7 @@ position:relative;
 	
 #video_uno img{
 	padding:0;
-	border:3px solid #fff;
+	border:3px solid #de9f5d;
 	}	
 
 
@@ -61,3 +68,71 @@ position:relative;
 #contacto_wrap{
 	font-family:roboto;
 	}
+	
+
+	
+
+
+#inicio{behavior: url(css/PIE.htc);font-familY:roboto; font-weight:bold;}
+
+.nano {
+  position : relative;
+
+  overflow : hidden;
+}
+
+
+.nano > .nano-content {
+  position      : absolute;
+  overflow      : scroll;
+  overflow-x    : hidden;
+  top:            30px;
+  right         : 0;
+  bottom        : 0;
+  left          : 0;
+  padding-right:70px !important
+}
+.nano > .nano-content:focus {
+  outline: thin dotted;
+}
+.nano > .nano-content::-webkit-scrollbar {
+  display: none;
+}
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  display: block;
+}
+.nano > .nano-pane {
+  background : rgba(0,0,0,.25);
+  position   : absolute;
+  width      : 5px;
+  right      : 0;
+  top        : 50px;
+  bottom     : 0px;
+  visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : .01;
+  -webkit-transition    : .2s;
+  -moz-transition       : .2s;
+  -o-transition         : .2s;
+  transition            : .2s;
+ 
+}
+.nano > .nano-pane > .nano-slider {
+  background: #ed9d29;
+  position              : relative;
+
+}
+.nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
+  visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : 0.99;
+}
+/*
+#content_home{display:block;}
+
+#content_home.quitar_ie8{display:none;}
+
+#content_home.top_ie8{margin-top:-650px !important;}
+*/
+
+
+#content.contacto, #content.contenido, #content.video{background-color:#fef7ed;	background-position: 100% 0}
+

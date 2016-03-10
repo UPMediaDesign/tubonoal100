@@ -11,5 +11,12 @@
 <script src="js/mediaelement-and-player.min.js"></script>
 <script src="js/jquery.nanoscroller.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/ie8.js"></script>
+<![endif]--> 
+
+
+
 </body>
 </html>
