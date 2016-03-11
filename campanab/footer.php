@@ -1,3 +1,5 @@
+
+
 <div id="aviso" class="">
     <div id="inside">
     	 <img id="logo_hor" src="img/logo2.png" width="180" height="auto" alt="Realiza tus sueños con Cuenta 2 "/>

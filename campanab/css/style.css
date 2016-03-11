@@ -1418,3 +1418,16 @@ padding-bottom: 240px;
 border-bottom-left-radius: 20px;
 }
 
+
+.legales {
+    color: #322428;
+    display: block;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 10px;
+    line-height: 15px;
+    margin-left: 2%;
+    margin-top: 9px;
+    width: 93%;
+    z-index: 10;
+	
+}

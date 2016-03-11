@@ -1283,7 +1283,6 @@ body.remove_logo #header h1, body.remove_logo #header h2, body.remove_logo #boto
     margin-top: 180px;
 	width:800px;
 	height:450px;
-	background:#fff;
 	float:left;
 	position:relative;
 	
@@ -1365,4 +1364,16 @@ body.remove_logo #header h1, body.remove_logo #header h2, body.remove_logo #boto
 	-webkit-border-bottom-left-radius: 20px;
 -moz-border-radius-bottomleft: 20px;
 border-bottom-left-radius: 20px;
+}
+
+.legales {
+     color: #fff;
+    display: block;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 10px;
+    line-height: 15px;
+    margin-left: 2%;
+    margin-top: 9px;
+    width: 93%;
+    z-index: 10;
 }
