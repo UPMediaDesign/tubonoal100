@@ -91,7 +91,7 @@ function onPlayerStateChange(event) {
 	if (event.data == YT.PlayerState.ENDED){
 		// Agregar evento y acción cuando termine el video
 		//console.log('terminé');
-	    ga('send', 'event', 'Landing A', 'View', 'Video A 100%' );					
+	    ga('send', 'event', 'Landing A', 'View', 'Video1 A 100%' );					
 		$('#content').removeClass('activo');
 		 TweenMax.to(container, 0.5,   {top:"-100%", opacity:0, delay:0});
 		 TweenMax.to(inicio, 0.3,   {top:"-100%", opacity:0, delay:0}); 
@@ -115,6 +115,7 @@ $('#inicio').click( function() {
 
 
 <div class="embed-responsive embed-responsive-16by9">
+    <a id="close_video"  href="javascript:void(0)">X</a> 
 	<div id="player"  class="embed-responsive-item"></div>
 </div>
 

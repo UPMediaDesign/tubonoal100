@@ -50,14 +50,14 @@ $('#menu').on('click', function(e) {
  $('#section1_video1').on('click', function(e) {
 	 $('#content').addClass('video');
      $('#content').load('parts/video.html');
-	 ga('send', 'pageview', 'Landing(B) - Video1');
+	 ga('send', 'pageview', 'Landing(A) - Video1');
  });
  
    $('#section2_video1').on('click', function(e) {
      
 	 $('#content').addClass('video');
      $('#content').load('parts/video2.html');
-	 ga('send', 'pageview', 'Landing(B) - Video2');
+	 ga('send', 'pageview', 'Landing(A) - Video2');
  });
 
 
@@ -73,7 +73,7 @@ $('#menu').on('click', function(e) {
 	 $('#content').addClass('contacto');
      beforeSend:jQuery('#content').html("<div class='cargando'></div>"); 
      $('#content').load('parts/contacto.html'); 
-	 ga('send', 'pageview', 'Landing(B) - Contacto');
+	 ga('send', 'pageview', 'Landing(A) - Contacto');
  });
  
   $('.menu1').on('click', function(e) {
@@ -81,7 +81,7 @@ $('#menu').on('click', function(e) {
 	 $('#menu_container').removeClass('activo');
 	  beforeSend:jQuery('#content').html("<div class='cargando'></div>"); 
 	 $('#content').load('parts/que_es_apv.html'); 
-	 ga('send', 'pageview', 'Landing(B) - Que es APV');
+	 ga('send', 'pageview', 'Landing(A) - Que es APV');
  });
  
   $('.menu2').on('click', function(e) {
@@ -89,7 +89,7 @@ $('#menu').on('click', function(e) {
 	  $('#menu_container').removeClass('activo');
 	   beforeSend:jQuery('#content').html("<div class='cargando'></div>"); 
       $('#content').load('parts/beneficios_apv.html'); 
-	  ga('send', 'pageview', 'Landing(B) - Beneficios APV');
+	  ga('send', 'pageview', 'Landing(A) - Beneficios APV');
  });
  
   $('.menu3').on('click', function(e) {
@@ -97,7 +97,7 @@ $('#menu').on('click', function(e) {
 	   $('#menu_container').removeClass('activo');
 	    beforeSend:jQuery('#content').html("<div class='cargando'></div>"); 
 	  $('#content').load('parts/inverti_apv.html'); 
-	  ga('send', 'pageview', 'Landing(B) - Invertir APV');
+	  ga('send', 'pageview', 'Landing(A) - Invertir APV');
  });
  
  
@@ -106,7 +106,14 @@ $( document ).ajaxComplete(function( event, xhr, settings ) {
 	
 	
 	
-	
+	 $('#close_video').on('click', function(e) {
+      $('#content').removeClass('activo');
+	  TweenMax.to(boton, 0.3,   {marginLeft:"0%", opacity:1, delay:0});
+	  TweenMax.to(container, 0.5,   {top:"-100%", opacity:0, delay:0});
+	  TweenMax.to(inicio, 0.3,   {top:"-100%", opacity:0, delay:0}); 
+	  
+	 
+ });
 	
 	
 	

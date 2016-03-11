@@ -35,6 +35,21 @@
 <script src="http://html5shiv-printshiv.googlecode.com/svn/trunk/html5shiv-printshiv.js"></script>
 <![endif]--> 
 
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '638262262935199');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=638262262935199&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
 
 </head>
 
@@ -72,7 +87,7 @@
        <h4><span></span>Sácale el mejor partido a tu Bono</h4>
        
     	<p>
-   Queremos que recibas el benefico total de tu bono, revisa las alternativas que te permitirán obtener el 100% de su bono sin pagar impuestos y/o reducir el efecto impuestos.
+   Queremos que recibas un 15% más de tu Bono, revisa la alternativa de hacer APV para aprovechar este beneficio.
     	</p>
         
     </article>

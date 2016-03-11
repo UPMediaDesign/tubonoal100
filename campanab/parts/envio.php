@@ -58,11 +58,11 @@ $fecha = date("d-m-Y H:i");
 	
 	
 	$correo="<html><head></head><body><p style='font-family:Arial;font-size:12px;line-height:16px;'>
-	Contacto Cuenta 2:<br /><br />
+	Formulario Regimen A:<br /><br />
 	<strong>Nombre:</strong> $_POST[nombre]<br />
 	<strong>Apellido:</strong> $_POST[apellido]<br />
 	<strong>RUT:</strong> $_POST[rut]<br />
-	<strong>E-mail:</strong> $_POST[email]<br /><br />
+	<strong>E-mail:</strong> $_POST[email]<br />
 	<strong>Teléfono:</strong> $_POST[telefono]<br />
 	<strong>Ciudad:</strong> $_POST[ciudad]<br />
 	<br />

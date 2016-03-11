@@ -12,7 +12,7 @@ $basededatos = "tubonoal100";    // sera el valor de nuestra BD
 $usuariodb = "upmedia";    // sera el valor de nuestra BD 
 $clavedb = "upmedia8039876.,";    // sera el valor de nuestra BD 
 
-$tabla = "regimena";    // sera el valor de una tabla 
+$tabla = "regimenb";    // sera el valor de una tabla 
 //$tabla_db2 = "otratabla";    // sera el valor de otra tabla 
 
 // Fin de los parametros a configurar para la conexion de la base de datos 

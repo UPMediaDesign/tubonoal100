@@ -25,6 +25,22 @@
 <link rel="stylesheet" href="css/ie8.css" />  
 <script src="http://html5shiv-printshiv.googlecode.com/svn/trunk/html5shiv-printshiv.js"></script>
 <![endif]--> 
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '638262262935199');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=638262262935199&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
 </head>
 <body>
 <script>
@@ -37,7 +53,7 @@
   ga('send', 'pageview');
 </script>
 <div id="fondo"></div>
-<div class="loading">
+<div class="loading"><img id="logo" src="img/logo.png" width="511" height="94" alt="Tu Bono al 100%"/>
 </div>
  <div class="menu_m">
  <a href="javascript:void(0)" id="menu"></a>

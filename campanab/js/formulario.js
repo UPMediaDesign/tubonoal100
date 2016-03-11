@@ -17,7 +17,7 @@ $(document).ready(function(){
 							$('body').addClass('final');
 							$("#mensaje").html("<strong>Tus datos han sido enviados con éxito </strong><span>Uno de nuestros ejecutivos se contactará<br>contigo a la brevedad.</span><span class='gracias'></span>");
 							
-							ga('send', 'event', 'Formulario Landing B', 'Submit', $("#Email").val() );
+							ga('send', 'event', 'Formulario Landing A', 'Submit', $("#Email").val() );
 							
 							document.getElementById("Nombre").value="";
 							document.getElementById("Apellido").value="";
