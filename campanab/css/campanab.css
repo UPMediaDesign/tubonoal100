@@ -40,7 +40,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dd9735', end
     float: left;
   
     font-weight: bolder;
-    line-height: 23px;
+    line-height: 150%;
     margin-right: 10px;
     text-transform: uppercase;
 	 color: #ed9d29;

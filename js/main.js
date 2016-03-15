@@ -1,12 +1,16 @@
 //LOADING
 
 $(document).ready(function(){
-$('#section1_video1').click();
+	//$('#section1_video1').click();
 });
 
 jQuery(window).load(function() {
-		$(".loading").fadeOut("slow");;
-	});
+	$(".loading").fadeOut("slow");
+	
+	// se mueve lanzador de video despues de sacar el loader
+	$('#section1_video1').click();
+	
+});
 
 //VARIABLES
 var menu = $('#menu_container');

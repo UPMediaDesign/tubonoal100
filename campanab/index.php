@@ -20,7 +20,7 @@
     
  	 <div id="video_dos">
         <a id="section2_video1" href="javascript:void(0)">
-         <h4 class="uc"><span>Invierte en Cotizaciones Voluntarias</span> Régimen B y Depósitos Convenidos</h4>
+         <h4 class="uc"><span style="color:#322428 !important">Invierte en Cotizaciones Voluntarias</span> Régimen B y Depósitos Convenidos</h4>
          <span class="view2">Ver Video</span>
   			<img src="img/video_dos.jpg" width="206" height="109" alt=""/>
            
